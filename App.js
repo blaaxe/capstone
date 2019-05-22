@@ -50,11 +50,13 @@ const Login_StackNavigator = StackNavigator({
   Home: {
     screen: Home,
     navigationOptions: ({ navigation }) => ({
-      title: 'Home',
+      title: '                     Home',
       headerLeft: <HamburgerIcon navigate={navigation.navigate} />,
 
       headerStyle: {
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        elevation: 0,
+        shadowOpacity: 0
       },
       headerTintColor: '#000',
     })
@@ -65,11 +67,13 @@ const Home_StackNavigator = StackNavigator({
   Home: {
     screen: Home,
     navigationOptions: ({ navigation }) => ({
-      title: 'Home',
+      title: '                   Home',
       headerLeft: <HamburgerIcon navigate={navigation.navigate} />,
 
       headerStyle: {
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        elevation: 0,
+        shadowOpacity: 0
       },
       headerTintColor: '#000',
     })
@@ -80,11 +84,13 @@ const Notifications_StackNavigator = StackNavigator({
   Notifications: {
     screen: Notifications,
     navigationOptions: ({ navigation }) => ({
-      title: 'Notifications',
+      title: '                Notifications',
       headerLeft: <HamburgerIcon navigate={navigation.navigate} />,
 
       headerStyle: {
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        elevation: 0,
+        shadowOpacity: 0
       },
       headerTintColor: '#000',
     })
@@ -95,11 +101,13 @@ const Graphs_StackNavigator = StackNavigator({
   Graphs: {
     screen: Graphs,
     navigationOptions: ({ navigation }) => ({
-      title: 'Graphs',
+      title: '                     Graphs',
       headerLeft: <HamburgerIcon navigate={navigation.navigate} />,
 
       headerStyle: {
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        elevation: 0,
+        shadowOpacity: 0
       },
       headerTintColor: '#000',
     })
@@ -110,11 +118,13 @@ const Profile_StackNavigator = StackNavigator({
   Profile: {
     screen: Profile,
     navigationOptions: ({ navigation }) => ({
-      title: 'Profile',
+      title: '                     Profile',
       headerLeft: <HamburgerIcon navigate={navigation.navigate} />,
 
       headerStyle: {
-        backgroundColor: '#0575e6'
+        backgroundColor: '#0575e6',
+        elevation: 0,
+        shadowOpacity: 0,
       },
       headerTintColor: '#fff',
     })
@@ -125,11 +135,13 @@ const Settings_StackNavigator = StackNavigator({
   Settings: {
     screen: Settings,
     navigationOptions: ({ navigation }) => ({
-      title: 'Settings',
+      title: '                    Settings',
       headerLeft: <HamburgerIcon navigate={navigation.navigate} />,
 
       headerStyle: {
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+         elevation: 0,
+          shadowOpacity: 0
       },
       headerTintColor: '#000',
     })
