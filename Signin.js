@@ -10,6 +10,7 @@ import { Container,
   Input,
   Text,
   Button} from 'native-base';
+  import Reactotron from 'reactotron-react-native'
 
 const PureSignin = (props) => {
   const [email, setEmail] = useState("");

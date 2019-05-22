@@ -97,6 +97,9 @@ const Settings_StackNavigator = StackNavigator({
 });
 
 export default MyDrawerNavigator = DrawerNavigator({
+  LoginStack: {
+    screen: Login_StackNavigator
+  },
   MainStack: {
     screen: Home_StackNavigator
   },
