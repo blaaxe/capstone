@@ -64,9 +64,9 @@ const Profile_StackNavigator = StackNavigator({
       headerLeft: <HamburgerIcon navigate={navigation.navigate} />,
 
       headerStyle: {
-        backgroundColor: '#fff'
+        backgroundColor: '#0575e6'
       },
-      headerTintColor: '#000',
+      headerTintColor: '#fff',
     })
   },
 });
