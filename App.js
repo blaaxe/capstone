@@ -10,6 +10,16 @@ import Notifications from './Notification';
 import Graphs from './Graphs';
 import Profile from './Profile';
 import Settings from './Settings';
+import {Signin} from "./Signin";
+
+const Login_StackNavigator = StackNavigator({
+  LoginPage: {
+    screen: Signin,
+    navigationOptions: {
+      header: null
+    }
+  }
+});
 
 const Home_StackNavigator = StackNavigator({
   Home: {
