@@ -12,6 +12,8 @@ import { Container,
   Button} from 'native-base';
   import Reactotron from 'reactotron-react-native'
 
+console.disableYellowBox = true;
+
 const PureSignin = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,6 +33,8 @@ const PureSignin = (props) => {
 
   return (
     <Container style={styles.container}>
+          <ImageBackground source={require('./login_background.png')}
+ style={{flex: 1, width: '100%', height: '100%'}}>
       <Content>
         <Text style={styles.logo}>AYUDIAB</Text>
         <Text style={styles.hello}>
@@ -56,6 +60,7 @@ const PureSignin = (props) => {
             </Button>
         </Form>
       </Content>
+      </ImageBackground>
     </Container>
   );
 }
@@ -66,7 +71,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     marginLeft: 95,
-    marginTop:  80,
+    marginTop:  60,
     fontFamily: 'HelveticaNeueCondensedBlack',
     fontSize: 65,
     opacity: 0.9,
