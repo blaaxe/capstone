@@ -10,6 +10,56 @@ import Notifications from './Notification';
 import Graphs from './Graphs';
 import Profile from './Profile';
 import Settings from './Settings';
+import {Signin} from "./Signin";
+import {Signup} from "./Signup";
+import {SignupProfil} from "./SignupProfil";
+import {SignupDoctor} from "./SignupDoctor";
+import {SignupEmergency} from "./SignupEmergencyContact";
+
+const Login_StackNavigator = StackNavigator({
+  LoginPage: {
+    screen: Signin,
+    navigationOptions: {
+      header: null
+    }
+  },
+  SignupStepOne: {
+    screen: Signup,
+    navigationOptions: {
+      header: null
+    }
+  },
+  SignupStepTwo: {
+    screen: SignupProfil,
+    navigationOptions: {
+      header: null
+    }
+  },
+  SignupStepThree: {
+    screen: SignupDoctor,
+    navigationOptions: {
+      header: null
+    }
+  },
+  SignupStepFour: {
+    screen: SignupEmergency,
+    navigationOptions: {
+      header: null
+    }
+  },
+  Home: {
+    screen: Home,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Home',
+      headerLeft: <HamburgerIcon navigate={navigation.navigate} />,
+
+      headerStyle: {
+        backgroundColor: '#fff'
+      },
+      headerTintColor: '#000',
+    })
+  },
+});
 
 const Home_StackNavigator = StackNavigator({
   Home: {
@@ -87,6 +137,9 @@ const Settings_StackNavigator = StackNavigator({
 });
 
 export default MyDrawerNavigator = DrawerNavigator({
+  LoginStack: {
+    screen: Login_StackNavigator
+  },
   MainStack: {
     screen: Home_StackNavigator
   },

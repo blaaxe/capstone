@@ -7,11 +7,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "native-base": "^2.12.1",
     "react": "16.8.3",
     "react-native": "0.59.8",
     "react-native-chart-kit": "^2.6.1",
     "react-native-gesture-handler": "^1.2.1",
     "react-native-progress-circle-rtl": "^2.0.1",
+    "react-native-step-indicator": "0.0.11",
     "react-native-svg": "^9.4.0",
     "react-native-svg-charts": "^5.2.0",
     "react-navigation": "^1.6.1"
@@ -22,7 +24,8 @@
     "babel-jest": "24.8.0",
     "jest": "24.8.0",
     "metro-react-native-babel-preset": "0.54.1",
-    "react-test-renderer": "16.8.3"
+    "react-test-renderer": "16.8.3",
+    "reactotron-react-native": "^3.5.2"
   },
   "jest": {
     "preset": "react-native"
