@@ -9,6 +9,7 @@ import { Container,
   Input,
   Left,
   Right,
+  Picker,
   Text,
   Fab,
   Icon,
@@ -16,10 +17,11 @@ import { Container,
 import Reactotron from 'reactotron-react-native'
 import StepIndicator from 'react-native-step-indicator';
 
-const PureSignup = (props) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [verifyPassword, setVerifyPassword] = useState("");
+const PureSignupEmergency = (props) => {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [years, setYears] = useState(0);
+  const [diabetType, setDiabeteType] = useState(undefined);
   const [test, setTest] = useState(false);
 
   const customStyles = {
@@ -45,26 +47,11 @@ const PureSignup = (props) => {
 
   Reactotron.log('hello rendering world')
 
-  function handleEmailChange(e) {
-    const {name} = e.target;
-    setEmail(name);
-  }
-
-  function handlePasswordChange(e) {
-    const {name} = e.target;
-    setPassword(name);
-  }
-
-  function handleVerifyPasswordChange(e) {
-    const {name} = e.target;
-    setVerifyPassword(name);
-  }
-
   return (
     <Container style={styles.container}>
     <Header transparent>
           <Left>
-            <Button transparent onPress={() => props.navigation.navigate('LoginPage')}>
+            <Button transparent onPress={() => props.navigation.navigate('SignupStepThree')}>
               <Icon name="arrow-back" />
             </Button>
           </Left>
@@ -77,29 +64,33 @@ const PureSignup = (props) => {
         <StepIndicator
           stepCount={4}
           customStyles={customStyles}
-          currentPosition={0}
+          currentPosition={3}
         />
         <Form style={styles.form}>
-          <Text style={styles.text}>Register</Text>
+          <Text style={styles.text}>Emergency Contact</Text>
 
           <Item floatingLabel style={styles.input}>
-            <Label style={styles.textWhite}>Email</Label>
+            <Label style={styles.textWhite}>Lastname</Label>
             <Input style={styles.textWhite} />
           </Item>
           <Item floatingLabel style={styles.input}>
-            <Label style={styles.textWhite}>Password</Label>
-            <Input secureTextEntry={true} style={styles.textWhite} />
+            <Label style={styles.textWhite}>Firstname</Label>
+            <Input style={styles.textWhite} />
           </Item>
           <Item floatingLabel style={styles.input}>
-            <Label style={styles.textWhite}>Password</Label>
-            <Input secureTextEntry={true} style={styles.textWhite} />
+            <Label style={styles.textWhite}>Phone</Label>
+            <Input style={styles.textWhite} />
+          </Item>
+          <Item floatingLabel style={styles.input}>
+            <Label style={styles.textWhite}>Relationship</Label>
+            <Input style={styles.textWhite} />
           </Item>
         </Form>
       </Content>
       <Fab
         containerStyle={{ }}
         style={{ backgroundColor: "#ffffff" }}
-        onPress={() => props.navigation.navigate('SignupStepTwo')}>
+        onPress={() => props.navigation.navigate('Home')}>
         <Icon type="MaterialIcons" name="navigate-next" style={{fontSize: 50, color: '#004A94'}}/>
       </Fab>
     </Container>
@@ -126,12 +117,31 @@ const styles = StyleSheet.create({
     width: 250,
     left: 50
   },
+  picker: {
+    width: 250,
+    left: 65,
+    marginTop: 20
+  },
   textWhite: {
     color: "#ffffff",
   },
   login: {
     left: 135,
     marginTop: 50
+  },
+  loginText: {
+    fontSize: 30,
+    color: "#ffffff",
+    fontFamily: 'HelveticaNeueCondensedBlack',
+  },
+  signup: {
+    left: 105,
+    marginTop: 50
+  },
+  signupText: {
+    fontSize: 20,
+    color: "#004A94",
+    fontFamily: 'HelveticaNeueCondensedBlack',
   },
   text: {
     fontSize: 30,
@@ -141,4 +151,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Signup = (PureSignup);
+export const SignupEmergency = (PureSignupEmergency);

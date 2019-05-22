@@ -47,7 +47,7 @@ const PureSignin = (props) => {
             <Input secureTextEntry={true} style={styles.textWhite} />
           </Item>
             <Button transparent style={styles.login}
-                    onPress={() => setTest(true)}>
+                    onPress={() => props.navigation.navigate('Home')}>
               <Text style={styles.loginText}>Log In</Text>
             </Button>
             <Button transparent light style={styles.signup}
@@ -55,10 +55,6 @@ const PureSignin = (props) => {
               <Text style={styles.signupText}>Create account</Text>
             </Button>
         </Form>
-
-        {
-          test === true && <Text>Test onPress</Text>
-        }
       </Content>
     </Container>
   );
@@ -73,7 +69,7 @@ const styles = StyleSheet.create({
     marginTop:  80,
     fontFamily: 'HelveticaNeueCondensedBlack',
     fontSize: 65,
-    opacity: 0.6,
+    opacity: 0.9,
     letterSpacing: -1,
     color: "#ffffff",
   },
