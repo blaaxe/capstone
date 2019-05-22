@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Platform, View, Text, Image, TouchableOpacity, YellowBox, Dimensions } from 'react-native';
+import { StyleSheet, Platform, View, Text, Image, TouchableOpacity, YellowBox, Dimensions, Button } from 'react-native';
 import { DrawerNavigator } from 'react-navigation';
 import { StackNavigator } from 'react-navigation';
 
@@ -14,37 +14,58 @@ import {
 
 class Graphs extends Component {
 
+  constructor(props) {
+
+    super(props);
+
+
+  }
+
   render() {
 
-    const data = [
-      { name: 'Safe', population: 50, color: 'green', legendFontColor: '#7F7F7F', legendFontSize: 15 },
-      { name: 'Low Risk', population: 25, color: 'yellow', legendFontColor: '#7F7F7F', legendFontSize: 15 },
-      { name: 'Risk', population: 25, color: 'red', legendFontColor: '#7F7F7F', legendFontSize: 15 }
-    ];
+    const data = {
+        labels: ['Mon', 'Tus', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          data: [ 4, 7, 9, 8, 6, 10 ]
+        }]
+      };
 
-    const chartConfig = {
-      backgroundGradientFrom: '#1E2923',
-      backgroundGradientTo: '#08130D',
-      color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
-      strokeWidth: 2 // optional, default 3
-    };
+      const chartConfig = {
+        backgroundGradientFrom: '#fff',
+        backgroundGradientTo: '#fff',
+        color: (opacity = 1) => `rgba(0, 80, 200, ${opacity})`,
+        strokeWidth: 2 // optional, default 3
+      };
 
-    const screenWidth = Dimensions.get('window').width;
+    const screenWidth = Dimensions.get('window').width - 40;
 
     return (
 
       <View style={styles.MainContainer}>
+          <BarChart
+          style={{marginTop: 50}}
+            data={data}
+            width={screenWidth}
+            height={450}
+            yAxisLabel={'$'}
+            chartConfig={chartConfig}
+            />
+            <View style={{flexDirection: 'row', marginTop: -30, backgroundColor: '#fff'}}>
 
-      <PieChart
-        data={data}
-        width={screenWidth}
-        height={220}
-        chartConfig={chartConfig}
-        accessor="population"
-        backgroundColor="transparent"
-        paddingLeft="15"
-        absolute
-      />
+                <View style={{flex: 5, alignItems: 'flex-end', marginTop: 20}}>
+
+                    <Button title='Pie Graph' onPress={() => this.props.navigation.navigate('GraphPie')}/>
+                </View>
+                <View style={{flex: 5, alignItems: 'flex-start', marginTop: 20, marginLeft: 2}}>
+
+
+                    <Button title='Bar Graph' disabled/>
+                </View>
+            </View>
+            <View style={{flex: 1, marginTop: 25, alignItems: 'center'}}>
+              <Text>You can export your graphics in your settings or </Text>
+              <Text>find them on the web version</Text>
+            </View>
       </View>
     );
   }
@@ -60,6 +81,6 @@ const styles = StyleSheet.create({
     paddingTop: (Platform.OS) === 'ios' ? 20 : 0,
     alignItems: 'center',
     justifyContent: 'center',
-
+    backgroundColor: '#fff'
   }
 });

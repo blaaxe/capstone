@@ -8,6 +8,7 @@ import Custom_Side_Menu from './customSideMenu';
 import Home from './Home';
 import Notifications from './Notification';
 import Graphs from './Graphs';
+import GraphPie from './GraphPie';
 import Profile from './Profile';
 import Settings from './Settings';
 import {Signin} from "./Signin";
@@ -106,6 +107,21 @@ const Graphs_StackNavigator = StackNavigator({
   },
 });
 
+const GraphPie_StackNavigator = StackNavigator({
+  GraphPie: {
+    screen: GraphPie,
+    navigationOptions: ({ navigation }) => ({
+      title: 'GraphPie',
+      headerLeft: <HamburgerIcon navigate={navigation.navigate} />,
+
+      headerStyle: {
+        backgroundColor: '#fff'
+      },
+      headerTintColor: '#000',
+    })
+  },
+});
+
 const Profile_StackNavigator = StackNavigator({
   Profile: {
     screen: Profile,
@@ -146,6 +162,10 @@ export default MyDrawerNavigator = DrawerNavigator({
 
   SecondStack: {
     screen: Notifications_StackNavigator
+  },
+
+  SixthStack: {
+    screen: GraphPie_StackNavigator
   },
 
   ThirdStack: {
