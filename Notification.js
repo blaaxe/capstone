@@ -17,9 +17,18 @@ class Notifications extends Component {
 
       <View style={styles.MainContainer}>
 
-        <Text style={{ fontSize: 23 }}> This is Activity - Notifications </Text>
-
-      </View>
+        <View style={styles.date}>
+            <View>
+                  <Text style={styles.chevrons}> {'\<'} </Text>
+              </View>
+              <View>
+                  <Text style={styles.date_text}> Thursday, 23 May 2019 </Text>
+              </View>
+              <View>
+                  <Text style={styles.chevrons}>{'\>'} </Text>
+              </View>
+            </View>
+        </View>
     );
   }
 }
@@ -32,9 +41,24 @@ const styles = StyleSheet.create({
 
     flex: 1,
     paddingTop: (Platform.OS) === 'ios' ? 20 : 0,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#FFF'
 
-  }
+  },
+  chevrons: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#000'
+  },
+  date_text: {
+    fontSize: 15,
+    color: '#000'
+  },
+  date: {
+   fontSize: 25,
+    flexDirection: 'row',
+       textAlign: "center",
+     alignItems: 'center',
+    justifyContent: 'center',
+  },
 
 });
