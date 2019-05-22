@@ -35,40 +35,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
 
-  },
-
-  sideMenuContainer: {
-
-    width: '100%',
-    height: '100%',
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    paddingTop: 20
-  },
-
-  sideMenuProfileIcon:
-  {
-    resizeMode: 'center',
-    width: 150,
-    height: 150,
-    borderRadius: 150/2
-  },
-
-  sideMenuIcon:
-  {
-    resizeMode: 'center',
-    width: 28,
-    height: 28,
-    marginRight: 10,
-    marginLeft: 20
-
-  },
-
-  menuText:{
-
-    fontSize: 15,
-    color: '#222222',
-
   }
-
+  
 });
