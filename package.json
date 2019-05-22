@@ -9,11 +9,8 @@
   "dependencies": {
     "native-base": "^2.12.1",
     "react": "16.8.3",
-    "react-datepicker": "^2.5.0",
     "react-native": "0.59.8",
     "react-native-chart-kit": "^2.6.1",
-    "react-native-datepicker": "^1.7.2",
-    "react-native-datepicker-modal": "^1.1.0",
     "react-native-gesture-handler": "^1.2.1",
     "react-native-progress-circle-rtl": "^2.0.1",
     "react-native-step-indicator": "0.0.11",
