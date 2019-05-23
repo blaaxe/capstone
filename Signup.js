@@ -100,7 +100,7 @@ const PureSignup = (props) => {
         containerStyle={{ }}
         style={{ backgroundColor: "#ffffff" }}
         onPress={() => props.navigation.navigate('SignupStepTwo')}>
-        <Icon type="MaterialIcons" name="navigate-next" style={{fontSize: 50, color: '#004A94'}}/>
+         <Text style={{color: "#000"}}> {'\>'} </Text>
       </Fab>
     </Container>
   );

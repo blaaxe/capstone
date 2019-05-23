@@ -11,14 +11,15 @@ class Custom_Side_Menu extends Component {
 
       <View style={styles.sideMenuContainer}>
 
+        <Text style={{fontSize: 45, color: '#fff', marginTop: 50}} > AYUDIAB </Text>
 
-        <View style={{ width: '100%', height: 1, backgroundColor: '#0575e6', marginTop: 15}} />
+        <View style={{ width: '100%', height: 50, backgroundColor: '#0575e6', marginTop: 15}} />
 
         <View style={{width: '100%'}}>
 
             <View style={{flexDirection: 'row', marginTop: 10}}>
 
-              <View style={{ flex:2, flexDirection: 'row', justifyContent: 'flex-start' }}>
+              <View style={{ flex:3, flexDirection: 'row', justifyContent: 'flex-start' }}>
                 <Text style={styles.menuText} onPress={() => { this.props.navigation.navigate('Home') }} > Home </Text>
               </View>
               <View style={{ flex:1, flexDirection: 'row', justifyContent: 'flex-end' }}>
@@ -30,7 +31,7 @@ class Custom_Side_Menu extends Component {
 
             <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10}}>
 
-              <View style={{ flex:2, flexDirection: 'row', justifyContent: 'flex-start' }}>
+              <View style={{ flex:3, flexDirection: 'row', justifyContent: 'flex-start' }}>
                 <Text style={styles.menuText} onPress={() => { this.props.navigation.navigate('Notifications') }} > Notifications </Text>
               </View>
               <View style={{ flex:1, flexDirection: 'row', justifyContent: 'flex-end' }}>
@@ -43,7 +44,7 @@ class Custom_Side_Menu extends Component {
 
             <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10}}>
 
-              <View style={{ flex:2, flexDirection: 'row', justifyContent: 'flex-start' }}>
+              <View style={{ flex:3, flexDirection: 'row', justifyContent: 'flex-start' }}>
                 <Text style={styles.menuText} onPress={() => { this.props.navigation.navigate('Graphs') }} > Graphs </Text>
               </View>
               <View style={{ flex:1, flexDirection: 'row', justifyContent: 'flex-end' }}>
@@ -56,7 +57,7 @@ class Custom_Side_Menu extends Component {
 
             <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10}}>
 
-              <View style={{ flex:2, flexDirection: 'row', justifyContent: 'flex-start' }}>
+              <View style={{ flex:3, flexDirection: 'row', justifyContent: 'flex-start' }}>
                 <Text style={styles.menuText} onPress={() => { this.props.navigation.navigate('Profile') }} > Profile </Text>
               </View>
               <View style={{ flex:1, flexDirection: 'row', justifyContent: 'flex-end' }}>
@@ -69,7 +70,7 @@ class Custom_Side_Menu extends Component {
 
             <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 10}}>
 
-              <View style={{ flex:2, flexDirection: 'row', justifyContent: 'flex-start' }}>
+              <View style={{ flex:3, flexDirection: 'row', justifyContent: 'flex-start' }}>
                 <Text style={styles.menuText} onPress={() => { this.props.navigation.navigate('Settings') }} > Settings </Text>
               </View>
               <View style={{ flex:1, flexDirection: 'row', justifyContent: 'flex-end' }}>
@@ -82,7 +83,9 @@ class Custom_Side_Menu extends Component {
 
        </View>
 
-       <View style={{ width: '100%', height: 1, backgroundColor: '#0575e6', marginTop: 15}} />
+       <View style={{ width: '100%', height: 55, backgroundColor: '#0575e6', marginTop: 15}} />
+
+       <Text style={{fontSize: 25, color: '#fff', marginLeft: 90}} onPress={() => { this.props.navigation.navigate('LoginPage')}}> Log Out </Text>
 
 
       </View>
@@ -100,7 +103,7 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: '#0575e6',
     alignItems: 'center',
-    paddingTop: 20
+    paddingTop: 25
   },
 
   sideMenuProfileIcon:
@@ -123,8 +126,8 @@ const styles = StyleSheet.create({
 
   menuText:{
 
-    fontSize: 25,
-    color: '#fff',
+    fontSize: 30,
+    color: '#fff'
 
   }
 
