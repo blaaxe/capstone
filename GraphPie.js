@@ -24,11 +24,22 @@ class GraphPie extends Component {
 
       <ScrollView style={{flex: 1, backgroundColor: '#fff'}}>
         <View style={styles.container}>
+          <View style={styles.date}>
+              <View>
+                  <Text style={styles.chevrons}> {'\<'} </Text>
+              </View>
+              <View>
+                  <Text style={styles.date_text}> Thursday, 23 May 2019 </Text>
+              </View>
+              <View>
+                  <Text style={styles.chevrons}>{'\>'} </Text>
+              </View>
+          </View>
           <StatusBar
             hidden={true}
           />
           <PieChart
-          style={{marginTop: 50}}
+          style={{marginTop: 20}}
             chart_wh={chart_wh}
             series={series}
             sliceColor={sliceColor}
@@ -115,5 +126,13 @@ const styles = StyleSheet.create({
     height: 30,
     borderRadius: 30/2,
     backgroundColor: '#ff0000'
+  },
+  date: {
+   fontSize: 25,
+   color: 'black',
+    flexDirection: 'row',
+       textAlign: "center",
+     alignItems: 'center',
+    justifyContent: 'center'
   }
 });

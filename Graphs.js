@@ -42,8 +42,19 @@ class Graphs extends Component {
     return (
 
       <View style={styles.MainContainer}>
+          <View style={styles.date}>
+              <View>
+                  <Text style={styles.chevrons}> {'\<'} </Text>
+              </View>
+              <View>
+                  <Text style={styles.date_text}> Thursday, 23 May 2019 </Text>
+              </View>
+              <View>
+                  <Text style={styles.chevrons}>{'\>'} </Text>
+              </View>
+          </View>
           <BarChart
-          style={{marginTop: 50}}
+          style={{marginTop: 20}}
             data={data}
             width={screenWidth}
             height={450}
@@ -82,5 +93,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fff'
+  },
+  date: {
+   fontSize: 25,
+   color: 'black',
+    flexDirection: 'row',
+       textAlign: "center",
+     alignItems: 'center',
+    justifyContent: 'center'
   }
 });

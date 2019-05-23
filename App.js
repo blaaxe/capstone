@@ -119,11 +119,13 @@ const GraphPie_StackNavigator = StackNavigator({
   GraphPie: {
     screen: GraphPie,
     navigationOptions: ({ navigation }) => ({
-      title: '                 GraphPie',
+      title: '                 Pie Chart',
       headerLeft: <HamburgerIcon navigate={navigation.navigate} />,
 
       headerStyle: {
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        elevation: 0,
+        shadowOpacity: 0
       },
       headerTintColor: '#000',
     })
