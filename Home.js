@@ -35,7 +35,7 @@ class Home extends Component {
             <View style={{width: '100%'}}>
                   <View style={{flexDirection: 'row', marginTop: 50}}>
 
-                      <View style={{ flex:1}}>
+                      <View style={{ flex:1, marginLeft: 10}}>
                         <Image
                           style={{width: 20, height: 20, marginLeft: 10, marginTop: 2}}
                           source={require('./logo-clock.png')}
@@ -47,7 +47,7 @@ class Home extends Component {
                   </View>
 
 
-                  <View style={{flexDirection: 'row', marginTop: 10, backgroundColor: '#fafafa', height: 200}}>
+                  <View style={{flexDirection: 'row', marginTop: 10, backgroundColor: '#efefef', height: 200}}>
 
                       <View style={{flex: 5, alignItems: 'center', marginTop: 20}}>
                           <ProgressCircle
@@ -58,9 +58,9 @@ class Home extends Component {
                               shadowColor="#d4e4fb"
                               bgColor="#fff"
                           >
-                              <Text style={{ fontSize: 18 }}>{'0.4 mg/L'}</Text>
+                              <Text style={{ fontSize: 18, color: 'black' }}>{'0.4 mg/L'}</Text>
                           </ProgressCircle>
-                          <Text style={{ fontSize: 20, marginTop: 5}}>Glucose</Text>
+                          <Text style={{ fontSize: 20, marginTop: 5, color: 'black', fontWeight: 'bold'}}>Glucose</Text>
                       </View>
                       <View style={{flex: 5, alignItems: 'center', marginTop: 20}}>
                           <ProgressCircle
@@ -71,9 +71,9 @@ class Home extends Component {
                               shadowColor="#ffffb3"
                               bgColor="#fff"
                           >
-                              <Text style={{ fontSize: 18 }}>{'50%'}</Text>
+                              <Text style={{ fontSize: 18, color: 'black' }}>{'50%'}</Text>
                           </ProgressCircle>
-                          <Text style={{ fontSize: 20, marginTop: 5}}>Overall</Text>
+                          <Text style={{ fontSize: 20, marginTop: 5, color: 'black', fontWeight: 'bold'}}>Overall</Text>
                       </View>
                   </View>
             </View>
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
   MainContainer: {
 
     flex: 1,
+    color: 'black',
     paddingTop: (Platform.OS) === 'ios' ? 20 : 0,
     backgroundColor: '#fff'
 
