@@ -4,6 +4,7 @@ import { DrawerNavigator } from 'react-navigation';
 import { StackNavigator } from 'react-navigation';
 
 import HamburgerIcon from './hamburgericon';
+import HamburgerIconWhite from './hamburgericonWhite';
 import Custom_Side_Menu from './customSideMenu';
 import Home from './Home';
 import Notifications from './Notification';
@@ -137,7 +138,7 @@ const Profile_StackNavigator = StackNavigator({
     screen: Profile,
     navigationOptions: ({ navigation }) => ({
       title: '                     Profile',
-      headerLeft: <HamburgerIcon navigate={navigation.navigate} />,
+      headerLeft: <HamburgerIconWhite navigate={navigation.navigate} />,
 
       headerStyle: {
         backgroundColor: '#0575e6',
